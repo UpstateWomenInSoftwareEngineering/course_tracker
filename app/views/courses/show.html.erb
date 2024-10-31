@@ -1,0 +1,14 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4"><%= @course.course_name %></h1>
+    <p class="lead">Status: <%= @course.current_status %></p>
+    <p>Course Link: <%= @course.course_url %></p>
+    <p>Start Date: <%= @course.start_date %></p>
+    <p>End Date: <%= @course.end_date %></p>
+    <p>Notes: <%= @course.notes %></p>
+
+    <%= link_to "Edit this Course", edit_course_path(@course), class:"btn btn-secondary" %> |
+    <%= link_to "Back to Course List", courses_path, class:"btn btn-secondary" %><br><br>
+    <%= button_to "Delete this Course", @course, method: :delete, class:"btn btn-danger" %>
+  </div>
+</div>
